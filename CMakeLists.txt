@@ -5,6 +5,8 @@ enable_language(ASM)
 option(BUILD64 "Build for 64 bit" OFF)
 set(XAAC_ROOT "${CMAKE_CURRENT_SOURCE_DIR}")
 set(XAAC_CONFIG_DIR "${CMAKE_CURRENT_BINARY_DIR}")
+set(CMAKE_C_COMPILER /usr/bin/afl-clang-fast)
+set(CMAKE_CXX_COMPILER /usr/bin/afl-clang-fast++)
 find_package(Threads REQUIRED)
 
 set(CMAKE_STATIC_LIBRARY_PREFIX "")
